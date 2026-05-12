@@ -32,6 +32,17 @@
       "roleId": 3,
       "businessId": 1,
       "createdAt": "2025-03-01T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Sofía",
+      "lastName": "Tapia",
+      "email": "sofia@qullqa.com",
+      "password": "password123",
+      "status": "ACTIVE",
+      "roleId": 2,
+      "businessId": 2,
+      "createdAt": "2025-04-10T11:00:00Z"
     }
   ],
   "roles": [
@@ -51,8 +62,8 @@
     },
     {
       "id": 2,
-      "name": "Minimarket San Borja",
-      "type": "MINIMARKET",
+      "name": "Farmacia San Borja",
+      "type": "FARMACIA",
       "address": "Calle Las Flores 567, San Borja",
       "ruc": "20987654321",
       "planId": 1,
@@ -63,7 +74,7 @@
     {
       "id": 1,
       "name": "Plan Básico",
-      "description": "Ideal para pequeñas bodegas",
+      "description": "Ideal para pequeñas bodegas y farmacias",
       "price": 19.90,
       "currency": "PEN",
       "timeLength": "MONTHLY",
@@ -83,7 +94,7 @@
     {
       "id": 3,
       "name": "Plan Enterprise",
-      "description": "Para cadenas de tiendas",
+      "description": "Para cadenas de tiendas y farmacias",
       "price": 99.90,
       "currency": "PEN",
       "timeLength": "MONTHLY",
@@ -112,9 +123,9 @@
     },
     {
       "id": 3,
-      "name": "Almacén Frío",
+      "name": "Almacén Farmacia",
       "code": "ALM-003",
-      "address": "Av. Argentina 789",
+      "address": "Calle Las Flores 567",
       "status": "ACTIVE",
       "capacity": "SMALL",
       "businessId": 2
@@ -151,23 +162,23 @@
     },
     {
       "id": 5,
-      "name": "Detergente Ariel 1kg",
-      "description": "Detergente en polvo con enzimas",
-      "category": "CLEANING",
-      "businessId": 1
+      "name": "Paracetamol 500mg x 20",
+      "description": "Analgésico y antipirético",
+      "category": "MEDICINE",
+      "businessId": 2
     },
     {
       "id": 6,
-      "name": "Pan de Molde Bimbo 500g",
-      "description": "Pan de molde suave",
-      "category": "BAKERY",
+      "name": "Amoxicilina 500mg x 12",
+      "description": "Antibiótico de amplio espectro",
+      "category": "MEDICINE",
       "businessId": 2
     }
   ],
   "batches": [
     {
       "id": 1,
-      "expiration": "2025-12-31",
+      "expiration": "2026-12-31",
       "purchasePrice": 2.50,
       "status": "ACTIVE",
       "productId": 1,
@@ -183,7 +194,7 @@
     },
     {
       "id": 3,
-      "expiration": "2026-03-15",
+      "expiration": "2026-08-15",
       "purchasePrice": 5.80,
       "status": "ACTIVE",
       "productId": 3,
@@ -191,7 +202,7 @@
     },
     {
       "id": 4,
-      "expiration": "2025-09-01",
+      "expiration": "2026-05-24",
       "purchasePrice": 3.20,
       "status": "ACTIVE",
       "productId": 4,
@@ -199,16 +210,16 @@
     },
     {
       "id": 5,
-      "expiration": "2026-01-01",
-      "purchasePrice": 7.50,
+      "expiration": "2026-09-15",
+      "purchasePrice": 8.50,
       "status": "ACTIVE",
       "productId": 5,
       "inventoryId": 5
     },
     {
       "id": 6,
-      "expiration": "2025-07-20",
-      "purchasePrice": 4.10,
+      "expiration": "2026-05-20",
+      "purchasePrice": 15.00,
       "status": "ACTIVE",
       "productId": 6,
       "inventoryId": 6
@@ -238,7 +249,7 @@
     },
     {
       "id": 4,
-      "stockUnit": 200,
+      "stockUnit": 12,
       "productId": 4,
       "warehouseId": 1,
       "businessId": 1
@@ -247,8 +258,8 @@
       "id": 5,
       "stockUnit": 45,
       "productId": 5,
-      "warehouseId": 2,
-      "businessId": 1
+      "warehouseId": 3,
+      "businessId": 2
     },
     {
       "id": 6,
@@ -265,7 +276,7 @@
       "status": "PAID",
       "currency": "PEN",
       "paymentMethod": "CASH",
-      "description": "Venta mostrador",
+      "description": "Venta mostrador dom mañana",
       "customerId": 1,
       "businessId": 1
     },
@@ -275,7 +286,7 @@
       "status": "PAID",
       "currency": "PEN",
       "paymentMethod": "YAPE",
-      "description": "Venta cliente frecuente",
+      "description": "Venta cliente frecuente dom tarde",
       "customerId": 2,
       "businessId": 1
     },
@@ -285,7 +296,7 @@
       "status": "OPEN",
       "currency": "PEN",
       "paymentMethod": null,
-      "description": "Venta en curso",
+      "description": "Venta en curso lun",
       "customerId": null,
       "businessId": 1
     },
@@ -295,9 +306,139 @@
       "status": "CANCELLED",
       "currency": "PEN",
       "paymentMethod": "CASH",
-      "description": "Venta anulada",
+      "description": "Venta anulada farmacia",
       "customerId": 3,
       "businessId": 2
+    },
+    {
+      "id": 5,
+      "date": "2026-05-06T09:00:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "CASH",
+      "description": "Venta mié mañana",
+      "customerId": 1,
+      "businessId": 1
+    },
+    {
+      "id": 6,
+      "date": "2026-05-06T16:00:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "YAPE",
+      "description": "Venta mié tarde",
+      "customerId": 3,
+      "businessId": 1
+    },
+    {
+      "id": 7,
+      "date": "2026-05-07T10:00:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "CASH",
+      "description": "Venta jue mañana",
+      "customerId": 2,
+      "businessId": 1
+    },
+    {
+      "id": 8,
+      "date": "2026-05-07T15:30:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "PLIN",
+      "description": "Venta jue tarde",
+      "customerId": 4,
+      "businessId": 1
+    },
+    {
+      "id": 9,
+      "date": "2026-05-08T08:30:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "CASH",
+      "description": "Venta vie apertura",
+      "customerId": 1,
+      "businessId": 1
+    },
+    {
+      "id": 10,
+      "date": "2026-05-08T12:00:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "YAPE",
+      "description": "Venta vie mediodía",
+      "customerId": 5,
+      "businessId": 1
+    },
+    {
+      "id": 11,
+      "date": "2026-05-08T18:00:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "CASH",
+      "description": "Venta vie cierre",
+      "customerId": 2,
+      "businessId": 1
+    },
+    {
+      "id": 12,
+      "date": "2026-05-09T09:00:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "CASH",
+      "description": "Venta sáb mañana",
+      "customerId": 3,
+      "businessId": 1
+    },
+    {
+      "id": 13,
+      "date": "2026-05-09T13:00:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "YAPE",
+      "description": "Venta sáb mediodía",
+      "customerId": 6,
+      "businessId": 1
+    },
+    {
+      "id": 14,
+      "date": "2026-05-09T17:30:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "PLIN",
+      "description": "Venta sáb tarde",
+      "customerId": 1,
+      "businessId": 1
+    },
+    {
+      "id": 15,
+      "date": "2026-05-11T08:00:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "CASH",
+      "description": "Venta lun apertura",
+      "customerId": 4,
+      "businessId": 1
+    },
+    {
+      "id": 16,
+      "date": "2026-05-11T14:00:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "YAPE",
+      "description": "Venta lun tarde",
+      "customerId": 2,
+      "businessId": 1
+    },
+    {
+      "id": 17,
+      "date": "2026-05-12T08:30:00Z",
+      "status": "PAID",
+      "currency": "PEN",
+      "paymentMethod": "CASH",
+      "description": "Venta mar hoy",
+      "customerId": 5,
+      "businessId": 1
     }
   ],
   "saleDetails": [
@@ -332,6 +473,206 @@
       "discount": 0,
       "productId": 1,
       "saleId": 3
+    },
+    {
+      "id": 5,
+      "quantity": 10,
+      "unitPrice": 3.80,
+      "discount": 0,
+      "productId": 1,
+      "saleId": 5
+    },
+    {
+      "id": 6,
+      "quantity": 4,
+      "unitPrice": 4.50,
+      "discount": 0,
+      "productId": 4,
+      "saleId": 5
+    },
+    {
+      "id": 7,
+      "quantity": 3,
+      "unitPrice": 8.00,
+      "discount": 0,
+      "productId": 3,
+      "saleId": 5
+    },
+    {
+      "id": 8,
+      "quantity": 2,
+      "unitPrice": 15.50,
+      "discount": 0.50,
+      "productId": 2,
+      "saleId": 6
+    },
+    {
+      "id": 9,
+      "quantity": 8,
+      "unitPrice": 3.80,
+      "discount": 0,
+      "productId": 1,
+      "saleId": 7
+    },
+    {
+      "id": 10,
+      "quantity": 3,
+      "unitPrice": 15.50,
+      "discount": 0,
+      "productId": 2,
+      "saleId": 7
+    },
+    {
+      "id": 11,
+      "quantity": 5,
+      "unitPrice": 8.00,
+      "discount": 0,
+      "productId": 3,
+      "saleId": 7
+    },
+    {
+      "id": 12,
+      "quantity": 5,
+      "unitPrice": 4.50,
+      "discount": 0,
+      "productId": 4,
+      "saleId": 8
+    },
+    {
+      "id": 13,
+      "quantity": 15,
+      "unitPrice": 3.80,
+      "discount": 0,
+      "productId": 1,
+      "saleId": 9
+    },
+    {
+      "id": 14,
+      "quantity": 4,
+      "unitPrice": 15.50,
+      "discount": 0,
+      "productId": 2,
+      "saleId": 9
+    },
+    {
+      "id": 15,
+      "quantity": 7,
+      "unitPrice": 8.00,
+      "discount": 0,
+      "productId": 3,
+      "saleId": 10
+    },
+    {
+      "id": 16,
+      "quantity": 8,
+      "unitPrice": 4.50,
+      "discount": 0,
+      "productId": 4,
+      "saleId": 10
+    },
+    {
+      "id": 17,
+      "quantity": 4,
+      "unitPrice": 3.80,
+      "discount": 0,
+      "productId": 1,
+      "saleId": 11
+    },
+    {
+      "id": 18,
+      "quantity": 12,
+      "unitPrice": 3.80,
+      "discount": 0,
+      "productId": 1,
+      "saleId": 12
+    },
+    {
+      "id": 19,
+      "quantity": 3,
+      "unitPrice": 15.50,
+      "discount": 0,
+      "productId": 2,
+      "saleId": 12
+    },
+    {
+      "id": 20,
+      "quantity": 6,
+      "unitPrice": 8.00,
+      "discount": 0,
+      "productId": 3,
+      "saleId": 13
+    },
+    {
+      "id": 21,
+      "quantity": 10,
+      "unitPrice": 4.50,
+      "discount": 0,
+      "productId": 4,
+      "saleId": 13
+    },
+    {
+      "id": 22,
+      "quantity": 3,
+      "unitPrice": 15.50,
+      "discount": 0.60,
+      "productId": 2,
+      "saleId": 14
+    },
+    {
+      "id": 23,
+      "quantity": 8,
+      "unitPrice": 3.80,
+      "discount": 0,
+      "productId": 1,
+      "saleId": 15
+    },
+    {
+      "id": 24,
+      "quantity": 2,
+      "unitPrice": 15.50,
+      "discount": 0,
+      "productId": 2,
+      "saleId": 15
+    },
+    {
+      "id": 25,
+      "quantity": 4,
+      "unitPrice": 8.00,
+      "discount": 0,
+      "productId": 3,
+      "saleId": 15
+    },
+    {
+      "id": 26,
+      "quantity": 6,
+      "unitPrice": 4.50,
+      "discount": 0,
+      "productId": 4,
+      "saleId": 16
+    },
+    {
+      "id": 27,
+      "quantity": 5,
+      "unitPrice": 3.80,
+      "discount": 0,
+      "productId": 1,
+      "saleId": 17
+    },
+    {
+      "id": 28,
+      "quantity": 1,
+      "unitPrice": 15.50,
+      "discount": 0,
+      "productId": 2,
+      "saleId": 17
+    },
+    {
+      "id": 29,
+      "quantity": 2,
+      "unitPrice": 8.00,
+      "discount": 0,
+      "productId": 3,
+      "saleId": 17
     }
   ],
   "customers": [
@@ -358,6 +699,30 @@
       "phoneNumber": "987003003",
       "registeredAt": "2026-03-05T00:00:00Z",
       "businessId": 2
+    },
+    {
+      "id": 4,
+      "fullName": "Ana Torres",
+      "documentNumber": "44332211",
+      "phoneNumber": "987004004",
+      "registeredAt": "2026-03-20T00:00:00Z",
+      "businessId": 1
+    },
+    {
+      "id": 5,
+      "fullName": "Luis Ramos",
+      "documentNumber": "55667788",
+      "phoneNumber": "987005005",
+      "registeredAt": "2026-04-01T00:00:00Z",
+      "businessId": 1
+    },
+    {
+      "id": 6,
+      "fullName": "Carmen Díaz",
+      "documentNumber": "99887766",
+      "phoneNumber": "987006006",
+      "registeredAt": "2026-04-15T00:00:00Z",
+      "businessId": 1
     }
   ],
   "suppliers": [
@@ -374,25 +739,47 @@
     },
     {
       "id": 2,
+      "name": "InkaFarma",
+      "lastName": "Distribuciones",
+      "ruc": "20514659402",
+      "email": "ventas@inkafarma.pe",
+      "phone": "016190000",
+      "address": "Av. Paseo de la República 3220, Lima",
+      "status": "ACTIVE",
+      "businessId": 2
+    },
+    {
+      "id": 3,
       "name": "Backus",
       "lastName": "SAA",
       "ruc": "20100039207",
-      "email": "ventas@backus.com",
-      "phone": "016190000",
+      "email": "info@backus.pe",
+      "phone": "016257000",
       "address": "Av. Nicolás Ayllón 3986, Lima",
+      "status": "INACTIVE",
+      "businessId": 1
+    },
+    {
+      "id": 4,
+      "name": "Laive",
+      "lastName": "SA",
+      "ruc": "20100116392",
+      "email": "pedidos@laive.com.pe",
+      "phone": "013490000",
+      "address": "Av. Argentina 1155, Lima",
       "status": "ACTIVE",
       "businessId": 1
     },
     {
-      "id": 3,
-      "name": "Nestlé",
-      "lastName": "Perú SA",
-      "ruc": "20100128056",
-      "email": "info@nestle.com.pe",
-      "phone": "016257000",
-      "address": "Av. Los Laureles 214, San Isidro",
-      "status": "INACTIVE",
-      "businessId": 2
+      "id": 5,
+      "name": "Distribuidora Norte",
+      "lastName": "SRL",
+      "ruc": "20456789012",
+      "email": "ventas@distnorte.pe",
+      "phone": "012345678",
+      "address": "Jr. Las Dalias 234, Los Olivos",
+      "status": "ACTIVE",
+      "businessId": 1
     }
   ],
   "purchases": [
@@ -410,9 +797,9 @@
       "date": "2026-04-25T09:00:00Z",
       "status": "RECEIVED",
       "currency": "PEN",
-      "description": "Pedido urgente bebidas",
+      "description": "Pedido medicamentos abril",
       "supplierId": 2,
-      "businessId": 1
+      "businessId": 2
     },
     {
       "id": 3,
@@ -420,7 +807,7 @@
       "status": "GENERATED",
       "currency": "PEN",
       "description": "Orden pendiente recepción",
-      "supplierId": 3,
+      "supplierId": 1,
       "businessId": 1
     },
     {
@@ -428,9 +815,27 @@
       "date": "2026-05-10T10:00:00Z",
       "status": "DELAYED",
       "currency": "PEN",
-      "description": "Entrega retrasada",
-      "supplierId": 1,
+      "description": "Entrega retrasada farmacia",
+      "supplierId": 2,
       "businessId": 2
+    },
+    {
+      "id": 5,
+      "date": "2026-05-02T08:00:00Z",
+      "status": "RECEIVED",
+      "currency": "PEN",
+      "description": "Compra inicio de mayo",
+      "supplierId": 4,
+      "businessId": 1
+    },
+    {
+      "id": 6,
+      "date": "2026-05-05T09:00:00Z",
+      "status": "RECEIVED",
+      "currency": "PEN",
+      "description": "Reposición bebidas",
+      "supplierId": 5,
+      "businessId": 1
     }
   ],
   "purchaseDetails": [
@@ -456,12 +861,12 @@
     },
     {
       "id": 3,
-      "quantity": 300,
-      "unitPrice": 3.20,
+      "quantity": 150,
+      "unitPrice": 8.50,
       "discount": 0,
       "deliveryStatus": "DELIVERED",
       "deliveryTrackingNum": "TRK-2026-0003",
-      "productId": 4,
+      "productId": 5,
       "purchaseId": 2
     },
     {
@@ -477,12 +882,42 @@
     {
       "id": 5,
       "quantity": 80,
-      "unitPrice": 7.50,
+      "unitPrice": 15.00,
       "discount": 0.05,
       "deliveryStatus": "DELAYED",
       "deliveryTrackingNum": "TRK-2026-0005",
-      "productId": 5,
+      "productId": 6,
       "purchaseId": 4
+    },
+    {
+      "id": 6,
+      "quantity": 120,
+      "unitPrice": 2.50,
+      "discount": 0,
+      "deliveryStatus": "DELIVERED",
+      "deliveryTrackingNum": "TRK-2026-0006",
+      "productId": 1,
+      "purchaseId": 5
+    },
+    {
+      "id": 7,
+      "quantity": 50,
+      "unitPrice": 5.80,
+      "discount": 0,
+      "deliveryStatus": "DELIVERED",
+      "deliveryTrackingNum": "TRK-2026-0007",
+      "productId": 3,
+      "purchaseId": 5
+    },
+    {
+      "id": 8,
+      "quantity": 200,
+      "unitPrice": 3.20,
+      "discount": 0.10,
+      "deliveryStatus": "DELIVERED",
+      "deliveryTrackingNum": "TRK-2026-0008",
+      "productId": 4,
+      "purchaseId": 6
     }
   ],
   "alerts": [
@@ -490,12 +925,12 @@
       "id": 1,
       "type": "LOW_STOCK",
       "severity": "HIGH",
-      "message": "Stock de Pan de Molde Bimbo por debajo del mínimo (30 unidades)",
+      "message": "Stock de Amoxicilina 500mg por debajo del mínimo (30 unidades)",
       "date": "2026-05-11T07:00:00Z",
       "status": "ACTIVE",
       "productId": 6,
       "batchId": 6,
-      "businessId": 1
+      "businessId": 2
     },
     {
       "id": 2,
@@ -512,22 +947,66 @@
       "id": 3,
       "type": "LOW_STOCK",
       "severity": "LOW",
-      "message": "Detergente Ariel con stock bajo (45 unidades)",
+      "message": "Paracetamol 500mg con stock bajo (45 unidades)",
       "date": "2026-05-10T07:00:00Z",
       "status": "RESOLVED",
       "productId": 5,
       "batchId": 5,
-      "businessId": 1
+      "businessId": 2
     },
     {
       "id": 4,
       "type": "EXPIRATION",
       "severity": "HIGH",
-      "message": "Lote de Pan de Molde vence en 60 días",
+      "message": "Lote de Amoxicilina vence en 9 días",
       "date": "2026-05-09T07:00:00Z",
       "status": "SENT",
       "productId": 6,
       "batchId": 6,
+      "businessId": 2
+    },
+    {
+      "id": 5,
+      "type": "LOW_STOCK",
+      "severity": "HIGH",
+      "message": "Stock de Gaseosa Inca Kola crítico (12 unidades)",
+      "date": "2026-05-12T06:00:00Z",
+      "status": "ACTIVE",
+      "productId": 4,
+      "batchId": 4,
+      "businessId": 1
+    },
+    {
+      "id": 6,
+      "type": "EXPIRATION",
+      "severity": "HIGH",
+      "message": "Lote de Amoxicilina 500mg vence en 8 días",
+      "date": "2026-05-12T06:00:00Z",
+      "status": "ACTIVE",
+      "productId": 6,
+      "batchId": 6,
+      "businessId": 2
+    },
+    {
+      "id": 7,
+      "type": "LOW_STOCK",
+      "severity": "MEDIUM",
+      "message": "Stock de Arroz Costeño bajo (80 unidades), reposición recomendada",
+      "date": "2026-05-11T08:00:00Z",
+      "status": "ACTIVE",
+      "productId": 2,
+      "batchId": 2,
+      "businessId": 1
+    },
+    {
+      "id": 8,
+      "type": "EXPIRATION",
+      "severity": "MEDIUM",
+      "message": "Lote de Arroz Costeño vence en 49 días",
+      "date": "2026-05-10T07:00:00Z",
+      "status": "RESOLVED",
+      "productId": 2,
+      "batchId": 2,
       "businessId": 1
     }
   ],
@@ -535,22 +1014,22 @@
     {
       "id": 1,
       "businessId": 1,
-      "totalProducts": 5,
+      "totalProducts": 4,
       "lowStockProducts": 2,
       "inventoryValue": 4320.50,
       "totalSales": 1850.00,
-      "salesCount": 3,
-      "generatedAt": "2026-05-11T06:00:00Z"
+      "salesCount": 13,
+      "generatedAt": "2026-05-12T06:00:00Z"
     },
     {
       "id": 2,
       "businessId": 2,
-      "totalProducts": 1,
-      "lowStockProducts": 0,
+      "totalProducts": 2,
+      "lowStockProducts": 2,
       "inventoryValue": 870.00,
       "totalSales": 0,
       "salesCount": 0,
-      "generatedAt": "2026-05-11T06:00:00Z"
+      "generatedAt": "2026-05-12T06:00:00Z"
     }
   ],
   "deliveries": [
@@ -585,6 +1064,28 @@
       "status": "COMPLETED",
       "registeredAt": "2026-04-20T08:00:00Z",
       "completedAt": "2026-04-20T14:30:00Z",
+      "businessId": 1
+    },
+    {
+      "id": 4,
+      "purchaseDetailId": 6,
+      "trackingNumber": "TRK-2026-0006",
+      "currentLatitude": -11.9800,
+      "currentLongitude": -77.0600,
+      "status": "COMPLETED",
+      "registeredAt": "2026-05-02T08:00:00Z",
+      "completedAt": "2026-05-02T16:00:00Z",
+      "businessId": 1
+    },
+    {
+      "id": 5,
+      "purchaseDetailId": 8,
+      "trackingNumber": "TRK-2026-0008",
+      "currentLatitude": -12.0300,
+      "currentLongitude": -77.0350,
+      "status": "COMPLETED",
+      "registeredAt": "2026-05-05T09:00:00Z",
+      "completedAt": "2026-05-05T15:30:00Z",
       "businessId": 1
     }
   ]
